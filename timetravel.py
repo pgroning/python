@@ -8,11 +8,13 @@ def main():
     try:
         optlist, args = getopt.gnu_getopt(argv, "hx:a:d:", ["help","distance","acceleration","deceleration"])
     except getopt.GetoptError, err:
-        print str(err); #Print error msg
+        print str(err) #Print error msg
         print "type 'timetravel --help' for more information"
         sys.exit(2)
 
+    print optlist
     print args
+    
     for opt, arg in optlist:
         #print opt,arg
         if opt in ["-h", "--help"]:
